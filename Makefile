@@ -280,7 +280,7 @@ ERRORS := -Werror
 endif
 
 CPPFLAGS		=	${DEFINES} ${INCLUDES} ${MBEDTLS_INC} -nostdinc		\
-				-Wmissing-include-dirs $(ERRORS) $(WARNINGS)
+				-Wmissing-include-dirs $(ERRORS) $(WARNINGS) -fno-jump-tables
 ASFLAGS			+=	$(CPPFLAGS) $(ASFLAGS_$(ARCH))			\
 				-ffreestanding -Wa,--fatal-warnings
 TF_CFLAGS		+=	$(CPPFLAGS) $(TF_CFLAGS_$(ARCH))		\
